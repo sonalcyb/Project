@@ -37,7 +37,24 @@ html {
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: padding 0.3s ease;
 }
+
+/* 👇 Mobile Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.6rem 5%; /* thinner on phones */
+  }
+
+  .navbar .logo {
+    font-size: 1rem; /* slightly smaller text */
+  }
+
+  .nav-links {
+    gap: 1.5rem; /* compact spacing */
+  }
+}
+
 
 .logo {
   font-size: 1.8rem;
