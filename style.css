@@ -553,34 +553,39 @@ footer p::after {
 /* ✅ Final See More Button - Auto Adjustable + Responsive */
 .see-more-container {
   text-align: center;
-  margin-top: 15px; /* Project ke bilkul niche */
+  margin-top: 25px; /* Project ke bilkul niche */
 }
 
+/* ✅ See More Button (Updated & Bigger) */
 .see-more-btn {
   background: linear-gradient(45deg, var(--accent), #27ae60);
   color: white;
-  padding: 8px 20px;
-  border-radius: 6px;
+  padding: 14px 40px; /* 🔹 Pehle 8px 20px tha — ab zyada padding */
+  border-radius: 30px; /* 🔹 Rounder look */
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1rem; /* 🔹 Thoda bada text */
+  font-weight: 700; /* 🔹 Bold */
   display: inline-block;
-  width: auto;               /* 👈 Auto width adjust karega */
-  white-space: nowrap;       /* 👈 Text wrap nahi hoga */
+  width: auto;
+  white-space: nowrap;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.4); /* 🔹 Glow effect */
 }
 
 .see-more-btn:hover {
-  background: #27ae60;
-  transform: translateY(-2px);
+  background: #25b864;
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(46, 204, 113, 0.6);
 }
 
-/* ✅ Mobile Responsive Fix */
+/* ✅ Mobile Responsive */
 @media (max-width: 600px) {
-  .see-more-container {
-    margin-top: 8px;
+  .see-more-btn {
+    padding: 12px 28px; /* 🔹 Thoda chhota mobile ke liye */
+    font-size: 0.95rem;
+    border-radius: 25px;
   }
-
+  
   .see-more-btn {
     padding: 6px 14px;
     font-size: 0.75rem;
@@ -602,7 +607,7 @@ footer p::after {
 .contact-section {
   background: #0a0a0a;
   color: #fff;
-  padding: 80px 10%;
+  padding: 100px 10%;
   text-align: center;
 }
 
@@ -641,7 +646,7 @@ footer p::after {
   width: 100%;
   max-width: 600px;
   background: #111;
-  padding: 30px;
+  padding: 50px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(46, 204, 113, 0.2);
 }
@@ -672,17 +677,21 @@ footer p::after {
   background: #2ecc71;
   color: #000;
   border: none;
-  padding: 5px 20px;
-  border-radius: 25px;
+  padding: 12px 35px; /* 🔹 Pehle 5px 20px tha — ab bada */
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 600;
+  font-size: 1rem; /* 🔹 Thoda bada text */
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.4); /* 🔹 Soft glow effect */
 }
 
 .send-btn:hover {
   background: #25b864;
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(46, 204, 113, 0.6);
 }
+
 .contact-info-top {
   display: flex;
   justify-content: center;

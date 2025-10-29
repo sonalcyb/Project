@@ -131,18 +131,30 @@
 
    <!-- Contact Form -->
   <div class="contact-container">
-    <form action="#" class="contact-form">
-      <div class="form-group">
-        <input type="text" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="send-btn">Send Message</button>
-    </form>
+   <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  
+  <!-- ✅ Step 1: Add your Web3Forms access key -->
+  <input type="hidden" name="access_key" value="47edd0cc-bea7-4c11-8cc2-202ae0213986">
+
+  <!-- ✅ Step 2: Redirect to Thank You Page -->
+   <input type="hidden" name="redirect" value="thankyou.html">
+
+
+  <!-- ✅ User Inputs -->
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Your Name" required>
+  </div>
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Your Email" required>
+  </div>
+  <div class="form-group">
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="send-btn">Send Message</button>
+</form>
+
+
   </div>
 </section>
  <!-- Contact Info (above form) -->
