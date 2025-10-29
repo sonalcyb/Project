@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Cyber Sikhsha</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Cyber Sikhsha</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Skills Section -->
+  <section class="skills-page">
+    <div class="container">
+      <h1 class="section-title">Technical Skills</h1>
+      <p class="section-subtitle">Here’s what I’ve mastered through hands-on learning and practice.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Frontend Development</h3>
+          <p>HTML5, CSS3, JavaScript, and React.js for creating stunning responsive interfaces.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-server"></i>
+          <h3>Backend Development</h3>
+          <p>Node.js, Express.js, and REST APIs for robust server-side applications.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <h3>Database Management</h3>
+          <p>MySQL and MongoDB for storing and managing dynamic data efficiently.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Cybersecurity</h3>
+          <p>Understanding of ethical hacking, network defense, and vulnerability assessment.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-network-wired"></i>
+          <h3>Networking</h3>
+          <p>Deep knowledge of networking concepts, IPs, protocols, and troubleshooting.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Tools & Frameworks</h3>
+          <p>Git, VS Code, Tailwind CSS, and other development tools to streamline projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Cyber Sikhsha</p>
+    <div class="social-links">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
