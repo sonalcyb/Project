@@ -41,9 +41,10 @@ html {
 
 .logo {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--accent);
   text-decoration: none;
+  font-family: serif;
 }
 
 .nav-links {
@@ -81,7 +82,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8% 5%; /* 🔹 less padding */
+  padding: 11% 5%; /* 🔹 less padding */
   background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 30%);
   gap: 40px;
 }
@@ -140,10 +141,9 @@ html {
   background: #27ae60;
 }
 
-/* Skills Section */
 /* 🌟 Skills Section */
 .skills-section {
-  padding: 75px 10%;
+  padding: 10px 10%;
   background: #0a0a0a;
   color: white;
   text-align: center;
@@ -256,102 +256,135 @@ html {
   animation: fadeUp 0.8s ease forwards;
 }
 
+<!-----Propjects----->
+.projects-section {
+  text-align: center;
+  padding: 90px 0 70px;
+  background: #0a0a0a;
+}
 
-.projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
+/* ✅ My Projects heading center + gap fix */
+.section-title {
+  font-size: 2.8rem;
   color: #2ecc71;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 80px; /* Title aur cards ke beech gap */
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin-top: 0;
 }
 
+/* ✅ Project card design */
 .project-card {
   background: #111;
-  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
   border-radius: 12px;
-  padding: 20px;
-  transition: 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(46,204,113,0.4);
+  overflow: hidden;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
 }
 
 .project-card img {
   width: 100%;
-  height: 180px; /* 👈 Ye line add karo */
-  object-fit: cover; /* Image crop balance karega */
-  border-radius: 10px;
-  margin-bottom: 15px;
+  height: 180px;
+  object-fit: cover;
 }
 
-
-.project-card h3 {
-  color: #2ecc71;
-  margin-bottom: 10px;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
 }
 
-.project-card p {
-  color: #ccc;
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
+/* ✅ View Project button centered properly */
 .project-btn {
-  display: inline-block;
+  display: block;
+  background: #169d4f;
+  color: #fff;
   padding: 8px 16px;
-  background-color: #2ecc71;
-  color: #000;
+  margin: 15px auto 20px; /* Centers button horizontally */
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s;
+  text-align: center;
+  width: fit-content;
 }
+
+.project-btn:hover {
+  background: #27ae60;
+}
+
+/* ✅ Hide extra projects on mobile */
+@media (max-width: 768px) {
+  .project-card.hide-mobile {
+    display: none;
+  }
+}
+/* 🟢 Force gap between heading and cards */
+.projects-section .section-title {
+  margin-bottom: 50px !important; /* forcefully apply space */
+  display: block;
+}
+
+.projects-section {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.project-grid {
+  margin-top: 30px !important; /* extra backup spacing */
+}
+
+ 
 /* See More Button */
 .see-more-container {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .see-more-btn {
+  position: relative;
   display: inline-block;
-  padding: 12px 30px;
-  background: linear-gradient(45deg, var(--accent), #27ae60);
-  color: white;
-  font-weight: 600;
-  border-radius: 8px;
+  padding: 18px 120px; /* length badhai (zyada lamba), height thoda kam */
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00ff88;
+  background: radial-gradient(circle at top left, #0a0a0a, #050505);
+  border: 2px solid #00ff88;
+  border-radius: 14px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
 }
 
 .see-more-btn:hover {
-  background: #27ae60;
-  transform: translateY(-4px);
+  color: #0a0a0a;
+  background: linear-gradient(90deg, #00ff88, #00cc66);
+  box-shadow: 0 0 35px rgba(0, 255, 136, 0.7);
+  transform: translateY(-5px);
 }
 
-/* Responsive Adjustment */
-@media (max-width: 768px) {
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
   .see-more-btn {
-    width: 80%;
-    padding: 14px 0;
+    padding: 14px 80px; /* proportion adjust */
     font-size: 1rem;
   }
 }
 
-
-.see-more-btn:hover {
-  background: #27ae60;
-  transform: translateY(-3px);
-}
- 
-.project-btn:hover {
-  background-color: #27ae60;
-  color: #fff;
-}
 
 
 /* Footer */
@@ -373,7 +406,7 @@ footer p {
 }
 
 /* vertical line after text */
-footer p::after {
+footer p::before {
   content: "";
   display: inline-block;
   width: 1px;
@@ -408,7 +441,7 @@ footer p::after {
     gap: 0.7rem;
   }
 
-  footer p::after {
+  footer p::before {
     display: none;
   }
 }
@@ -496,118 +529,13 @@ footer p::after {
   }
 }
 
-
-.projects-section {
-  text-align: center;
-  padding: 70px 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
-.project-card {
-  background: #111;
-  color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s;
-  width: 100%;
-  max-width: 300px;
-}
-
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
-}
-
-.project-btn {
-  display: inline-block;
-  background: #169d4f;
-  color: #fff;
-  padding: 8px 16px;
-  margin: 10px 0 15px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.project-btn:hover {
-  background: #27ae60;
-}
-
-/* ✅ Final See More Button - Auto Adjustable + Responsive */
-.see-more-container {
-  text-align: center;
-  margin-top: 25px; /* Project ke bilkul niche */
-}
-
-/* ✅ See More Button (Updated & Bigger) */
-.see-more-btn {
-  background: linear-gradient(45deg, var(--accent), #27ae60);
-  color: white;
-  padding: 14px 40px; /* 🔹 Pehle 8px 20px tha — ab zyada padding */
-  border-radius: 30px; /* 🔹 Rounder look */
-  text-decoration: none;
-  font-size: 1rem; /* 🔹 Thoda bada text */
-  font-weight: 700; /* 🔹 Bold */
-  display: inline-block;
-  width: auto;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(46, 204, 113, 0.4); /* 🔹 Glow effect */
-}
-
-.see-more-btn:hover {
-  background: #25b864;
-  transform: scale(1.07);
-  box-shadow: 0 0 20px rgba(46, 204, 113, 0.6);
-}
-
-/* ✅ Mobile Responsive */
-@media (max-width: 600px) {
-  .see-more-btn {
-    padding: 12px 28px; /* 🔹 Thoda chhota mobile ke liye */
-    font-size: 0.95rem;
-    border-radius: 25px;
-  }
-  
-  .see-more-btn {
-    padding: 6px 14px;
-    font-size: 0.75rem;
-    border-radius: 5px;
-    width: auto;             /* 👈 Mobile pe bhi auto length */
-  }
-}
-
-/* ✅ Hide extra projects on mobile */
-@media (max-width: 768px) {
-  .project-card.hide-mobile {
-    display: none;
-  }
-}
-
 /* ===============================
    📞 Contact Section Styling
 ================================*/
 .contact-section {
   background: #0a0a0a;
   color: #fff;
-  padding: 100px 10%;
+  padding: 50px 10%;
   text-align: center;
 }
 
@@ -622,19 +550,6 @@ footer p::after {
   color: #ccc;
   margin-bottom: 40px;
 }
-
-/* Contact Info (Above Form) */
-.contact-info-top div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.contact-info-top i {
-  color: #2ecc71;
-  font-size: 1.2rem;
-}
-
 /* Form */
 .contact-container {
   display: flex;
@@ -691,34 +606,12 @@ footer p::after {
   transform: scale(1.07);
   box-shadow: 0 0 20px rgba(46, 204, 113, 0.6);
 }
-
-.contact-info-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 40px;
-}
-
-/* 📱 Responsive Design */
-@media (max-width: 768px) {
+/* 📱 Responsive */
+@media (max-width: 600px) {
   .contact-info-top {
     flex-direction: column;
     gap: 12px;
-  }
-
-  .section-title {
-    font-size: 2rem;
+    text-align: center;
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-info-horizontal {
-    flex-direction: column;
-    gap: 12px;
-  }
-}
